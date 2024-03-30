@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(0, 159, 227);
+    color: rgb(255, 255, 255); /* Corrected property name */
+}
+
+/* If you're targeting the result area or a container div for the calculator */
+#Heading {
+    background-color: rgb(255, 255, 255); /* Changes background color to white */
+    color: rgb(0, 0, 0); /* Optional: Change the text color to improve readability */
+}
+#Description {
+   // background-color: #f0f0f0; /* Light grey background */
+    padding: 20px; /* Adds some space inside the div */
+    margin-top: 20px; /* Adds some space above the div */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+#calculatorContainer {
+    background-color: rgb(255, 255, 255); /* White background */
+    padding: 50px; /* Space inside the container */
+    height: 40vh;
+    margin: auto; /* Center the container */
+    max-width: 400px; /* Maximum width of the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+#buttonContainer {
+
+
+    padding: 20px; /* Space inside the container around the buttons */
+    display: grid; /* Using grid layout for buttons */
+    grid-template-columns: repeat(4, 1fr); /* Three columns of equal width */
+    gap: 5px; /* Space between buttons */
+
+
+}
+
+
+#buttonContainer button {
+    padding: 10px; /* Padding inside each button for a larger clickable area */
+    font-size: 16px; /* Larger font size for readability */
+    border: 1px solid #ddd; /* Add border around the buttons */
+    border-radius: 5px; /* Slightly rounded corners for the buttons */
+    cursor: pointer; /* Changes the mouse cursor to indicate clickable items */
+    background-color: rgb(255, 255, 255);
+    /* Add margin to prevent buttons from sticking together due to border overlap */
+    margin: 2px;
+}
+
+#resultArea {
+    color: black;
+    font-size: 2em; /* Large text for visibility */
+    padding: 20px;
+    text-align: right; /* Typically, calculator displays align to the right */
+    margin-bottom: 20px; /* Space before the buttons start */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 5px; /* Rounded corners */
+
+}
+.logo {
+    position: absolute;
+    top: 10px; /* Adjust as needed for spacing from the top */
+    right: 10px; /* Adjust as needed for spacing from the right */
+    height: 60px; /* Adjust as needed for the size of the logo */
+    border-radius: 10px;
+}
+
+body {
+    position: relative; /* This makes sure that the logo is positioned relative to the body */
+    /* Rest of your body styles */
+}
+
