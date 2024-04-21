@@ -1,4 +1,4 @@
-document.querySelectorAll('#buttonContainer button').forEach(button => {
+document.querySelectorAll('#calculator-container  button').forEach(button => {
     button.addEventListener('click', () => {
         const value = button.textContent;
         const resultArea = document.getElementById('resultArea');

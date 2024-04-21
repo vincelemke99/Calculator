@@ -1,7 +1,7 @@
 body {
     background-color: rgb(0, 159, 227);
     color: rgb(255, 255, 255); /* Corrected property name */
-}
+    font-family: Arial, sans-serif;}
 
 /* If you're targeting the result area or a container div for the calculator */
 #Heading {
@@ -17,7 +17,7 @@ body {
 #calculatorContainer {
     background-color: rgb(255, 255, 255); /* White background */
     padding: 50px; /* Space inside the container */
-    height: 40vh;
+    height:  60vh;
     margin: auto; /* Center the container */
     max-width: 400px; /* Maximum width of the container */
     border-radius: 10px; /* Rounded corners */
@@ -25,13 +25,20 @@ body {
 }
 #buttonContainer {
 
-
     padding: 20px; /* Space inside the container around the buttons */
     display: grid; /* Using grid layout for buttons */
     grid-template-columns: repeat(4, 1fr); /* Three columns of equal width */
     gap: 5px; /* Space between buttons */
 
 
+}
+.calculator-display::before {
+    content: 'Past Calculations >';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.75rem;
+    color: rgb(0, 159, 227);
 }
 
 
@@ -54,18 +61,66 @@ body {
     margin-bottom: 20px; /* Space before the buttons start */
     border: 1px solid #ddd; /* A subtle border */
     border-radius: 5px; /* Rounded corners */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center-align the items */
+    justify-content: flex-start; /* Align items to the left */
 
+}
+.material-icons {
+    margin-right: 10px; /* Add some space after the icon */
 }
 .logo {
     position: absolute;
     top: 10px; /* Adjust as needed for spacing from the top */
     right: 10px; /* Adjust as needed for spacing from the right */
-    height: 60px; /* Adjust as needed for the size of the logo */
+    height: 70px; /* Adjust as needed for the size of the logo */
     border-radius: 10px;
 }
+/* Basic modal styles */
+.modal {
+    display: none;  /* Initially hidden */
+    position: fixed;  /* Fixed position on the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;  /* Enable scrolling if content overflows */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    z-index: 1000;  /* High z-index to overlay on other content */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;  /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;  /* Adjust the width as needed */
+}
+
+.close {
+    color: #aaa;  /* Color of the close button */
+    float: right;  /* Align to the right */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;  /* Change color on hover or focus */
+    text-decoration: none;  /* No underline */
+    cursor: pointer;  /* Change cursor to indicate clickable */
+}
+
+
 
 body {
     position: relative; /* This makes sure that the logo is positioned relative to the body */
-    /* Rest of your body styles */
+    height: 120vh;
 }
+h1 {
+    text-align: center; /* Centers the headline text horizontally */
+}
+
+
+
 

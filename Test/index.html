@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,60 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <img src="logo2.png" alt="Fresenius Formulator Logo" class="logo">
 <h1>Fresenius Formulator</h1>
-<div id="Heading">
-    <!-- Calculator results or interface might go here -->
-</div>
 <div id="Description">
-    <p>Tauchen Sie ein in die Welt der Zahlen mit dem exklusiven "Fresenius Formulator"!</p>
+    <p>Tauche in die Welt der Zahlen ein mit dem exklusiven "Fresenius Formulator"!</p>
     <p>Konzipiert für kluge Köpfe mit einem Faible für Präzision, ist dieser Taschenrechner nicht nur ein Rechenkünstler, sondern auch ein echter Campus-Liebling.</p>
 </div>
-
 <div id="calculatorContainer">
     <div id="resultArea">
-       0
+         <!-- Default display when no calculations are shown -->
+
     </div>
     <div id="buttonContainer">
-
-        <!-- Row 1 -->
-        <button> </button>
+        <button>(</button>
+        <button>)</button>
+        <button id="historyButton" title="Show Recent Results">  <!-- History button with an icon -->
+            <i class="material-icons">history</i>
+        </button>
+        <button></button>
+        <button>x^y</button>
         <button>AC</button>
         <button>DEL</button>
         <button>÷</button>
-
-
-        <!-- Row 1 -->
         <button>7</button>
         <button>8</button>
         <button>9</button>
         <button>x</button>
-
-        <!-- Row 2 -->
         <button>4</button>
         <button>5</button>
         <button>6</button>
         <button>-</button>
-        <!-- Row 3 -->
         <button>1</button>
         <button>2</button>
         <button>3</button>
         <button>+</button>
-        <!-- Row 4 -->
         <button>+/-</button>
         <button>0</button>
-        <button>.</button>
-        <button>=</button> <!-- Equals -->
-
-
-
+        <button>,</button>
+        <button onclick="sendCalculation()">=</button>
     </div>
-
-    <!-- Add other calculator elements here if necessary -->
+    <div id="historyModal" class="modal">  <!-- Modal container -->
+        <div class="modal-content">
+            <span class="close">&times;</span>  <!-- Close button -->
+            <h2>Last 10 Results</h2>
+            <ul id="recentResultsList"></ul>  <!-- Area to display recent results -->
+        </div>
+    </div>
 </div>
+<script src="script.js"></script>
+
 
 </body>
 </html>
