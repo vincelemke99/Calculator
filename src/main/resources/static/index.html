@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Setting the viewport to scale for different devices, crucial for responsive design. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Linking a CSS file for styling the page. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing Material Icons for use on buttons and other elements. -->
+
+</head>
+<body>
+<!-- Logo image at the top of the page -->
+<img src="logo2.png" alt="Fresenius Formulator Logo" class="logo">
+<!-- Main header for the page -->
+<h1>Fresenius Formulator</h1>
+<!-- Description section with introductory text about the calculator. -->
+<div id="Description">
+    <p>Tauche in die Welt der Zahlen ein mit dem exklusiven "Fresenius Formulator"!</p>
+    <p>Konzipiert für kluge Köpfe mit einem Faible für Präzision, ist dieser Taschenrechner nicht nur ein Rechenkünstler, sondern auch ein echter Campus-Liebling.</p>
+</div>
+<!-- Main container for the calculator interface. -->
+<div id="calculatorContainer">
+    <div id="resultArea">
+        <!-- Default display area where calculations are shown -->
+    </div>
+    <!-- Container for calculator buttons -->
+    <div id="buttonContainer">
+        <button>(</button>
+        <button>)</button>
+        <!-- History button to show recent calculations -->
+        <button id="historyButton" title="Show Recent Results">
+            <i class="material-icons">history</i>
+        </button>
+        <button></button>
+        <button>x^y</button>
+        <button>AC</button>
+        <button>DEL</button>
+        <button>÷</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>x</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>+</button>
+        <button>+/-</button>
+        <button>0</button>
+        <button>,</button>
+        <!-- Equal button to trigger calculation -->
+        <button onclick="sendCalculation()">=</button>
+    </div>
+    <!-- Modal container for displaying the history of calculations -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button for the modal -->
+            <h2>Last 10 Results</h2>
+            <ul id="recentResultsList"></ul> <!-- List to display recent results -->
+        </div>
+    </div>
+</div>
+<!-- Linking JavaScript file for functional behavior -->
+<script src="script.js"></script>
+</body>
+</html>

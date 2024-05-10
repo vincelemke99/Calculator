@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/calculation")
+@CrossOrigin(origins = "http://localhost:63343")
 public class CalculatorController {
     @Autowired
     private CalculationService calculationService;

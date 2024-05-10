@@ -2,6 +2,11 @@ package com.backend.calculator.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 // @SpringBootApplication denotes a configuration class that declares one or more @Bean methods
 // and also triggers auto-configuration and component scanning. It's a convenience annotation
