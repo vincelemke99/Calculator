@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Calculator for Hochschule Fresenius
 
 ## Introduction
@@ -40,3 +41,6 @@ This project is released under the MIT License. For more details, see the LICENS
 
 
 Make sure to replace `https://github.com/yourusername/calculator-hochschule-fresenius.git` with the actual URL of your project repository on GitHub. This will ensure that users and contributors can clone the project repository to their local systems accurately. Additionally, if you've added a license file to your repository, the link `[LICENSE](LICENSE)` will automatically link to it; otherwise, you might want to include the full license text or adjust the link accordingly.
+=======
+# Calculator
+>>>>>>> 75295a0f6130f7e04303cc934534f287fc25c473
