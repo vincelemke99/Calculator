@@ -2,64 +2,82 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent POM -->
+	<!-- Defines inheritance from Spring Boot's parent POM, which provides dependency management and plugins configurations -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+	<!-- Project coordinates -->
 	<groupId>com.ApplicationCoding</groupId>
 	<artifactId>calculator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>calculator</name>
 	<description>Full stack calculator application using Spring Boot</description>
+
+	<!-- Properties section -->
+	<!-- Specifies the Java version to be used in this project -->
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	<!-- Dependencies section -->
 	<dependencies>
+		<!-- Spring Boot Data JPA starter for database integration -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!-- Spring Boot Web starter for building web applications -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- MySQL JDBC Driver -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.22</version>
 		</dependency>
+
+		<!-- Additional MySQL connector, typically not necessary unless for specific compatibility reasons -->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
+		</dependency>
 
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-math3</artifactId>
-			<version>3.6.1</version>
-		</dependency>
+		<!-- Spring Boot starter for testing, includes dependencies like JUnit, Mockito, etc. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Library for evaluating mathematical expressions -->
 		<dependency>
 			<groupId>net.objecthunter</groupId>
 			<artifactId>exp4j</artifactId>
 			<version>0.4.8</version>
 		</dependency>
+
+		<!-- Jakarta Persistence API, for JPA specification -->
 		<dependency>
 			<groupId>jakarta.persistence</groupId>
 			<artifactId>jakarta.persistence-api</artifactId>
 		</dependency>
-
 	</dependencies>
 
+	<!-- Build section -->
 	<build>
 		<plugins>
+			<!-- Spring Boot Maven plugin for building and packaging Spring Boot applications -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
